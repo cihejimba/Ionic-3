@@ -1,0 +1,37 @@
+<ion-side-menus>
+	<ion-side-menu-content>
+		<ion-nav-bar class="bar-custom">
+			<ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+		</ion-nav-bar>
+		<ion-nav-view name="mainContainer" animation="slide-left-right"></ion-nav-view>
+	</ion-side-menu-content>
+
+	<ion-side-menu side="left" expose-aside-when="large">
+		<header class="bar bar-header bar-custom">
+			<h1 class="title">Menu</h1>
+		</header>
+		<ion-content class="has-header my-menu">
+			<ion-list>
+				<div class="menu-category">CATEGORY 1</div>
+				<hr />
+				<ion-item menu-close ng-click="login()"><i class="icon ion-paper-airplane"></i> Login</ion-item>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" href="#/app/feed/" ui-sref="app.feed"><i class="icon ion-person"></i> My feed <div class="menu-dot"></div></ion-item>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" href="#/app/friends" ui-sref="app.friends"><i class="icon ion-person-stalker"></i> Friends <div class="menu-dot"></div></ion-item>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" href="#/app/playlists"><i class="icon ion-paper-airplane"></i> Playlists <div class="menu-dot"></div></ion-item>
+				<hr />
+				<div class="menu-category">CATEGORY 2</div>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" ng-click="login()"><i class="icon ion-paper-airplane"></i> Login</ion-item>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" href="#/app/search"><i class="icon ion-paper-airplane"></i> Search <div class="menu-dot"></div></ion-item>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" href="#/app/browse"><i class="icon ion-paper-airplane"></i> Browse <div class="menu-dot"></div></ion-item>
+				<hr />
+				<ion-item menu-close ui-sref-active="activated" href="#/app/playlists"><i class="icon ion-paper-airplane"></i> Playlists <div class="menu-dot"></div></ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>MyApp</title>
+
+	<!-- Dependancies -->
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet" />
+	<script src="lib/ionic/js/ionic.bundle.min.js"></script>
+	<script src="lib/angular-local-storage.min.js"></script>
+	
+	<link href="assets/css/style.css" rel="stylesheet" />
+	
+	<!-- Application -->
+	<script src="app/app.js"></script>
+	<script src="app/misc/utility.js"></script>
+	
+	<!-- Directives -->
+	<script src="app/directives/alert/alert.js"></script>
+	
+	<!-- Services -->
+	<script src="app/services/apiService.js"></script>
+	
+	<!-- Global -->
+	<script src="app/global/menu/menu.js"></script>
+	
+	<!-- Activities -->
+	<script src="app/activities/feed/feed.js"></script>
+	<script src="app/activities/friends/friends.js"></script>
+</head>
+<body ng-app="mobile">
+	<ion-nav-view animation="fade-implode"></ion-nav-view>
+</body>
+</html>

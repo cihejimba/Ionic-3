@@ -1,0 +1,75 @@
+/** Navigation bar **/
+.bar-custom { background-color: #5283CF; border-bottom: 1px solid #5283CF; }
+.bar .title { color: #FFFFFF; }
+.bar .button { color: #FFFFFF; }
+
+/** Content **/
+.dashboard { background-color: #E6E6E6; }
+
+/** Menu **/
+.my-menu { background-color: #212624; }
+.my-menu .icon { margin-right:20px; font-size:25px; }
+.my-menu .menu-category { background-color: #1A1A1A; color: #666666; font-size:12px; padding:5px 15px 5px 15px; }
+.my-menu .item { background-color: #212624; color: #FFFFFF; border:none; position:relative; }
+.my-menu .item-content { background-color: #212624; color: #FFFFFF; position:relative; }
+.my-menu .activated.item { background-color: #323735; color: #5283CF; }
+.my-menu .activated.item-content { background-color: #323735; color: #5283CF; }
+.my-menu .activated .item { background-color: #323735; color: #5283CF; }
+.my-menu .activated .item-content { background-color: #323735; color: #5283CF; }
+.my-menu hr { height: 1px; border: none; background: linear-gradient(90deg, #212624, #323735, #212624); margin:1px;}
+.my-menu .menu-dot { display:none; }
+.my-menu .activated .menu-dot { height:10px; width:10px; display:block; border-radius:5px; background-color: #5283CF; line-height:100%; position:absolute; top:50%; margin-top:-5px; right:15px; }
+
+/** Cards **/
+.card.card-header { padding-top:0px; }
+.card.card-header .card-top { width:100%; height: 200px; background-position : center center; background-size:cover; position:relative;}
+.card.card-header .card-top-avatar { height:100px; width:100px; background-color: #5283CF; border-radius: 50px; padding:2px; position:absolute; bottom:0; left:50%; margin-left:-50px; margin-bottom:-30px;}
+.card.card-header .card-top-title { color: #5283CF; text-align:center; font-size:20px; margin-top:50px; }
+.card.card-header .card-top-content { white-space: normal; text-align:center; margin:10px; }
+.card .card-title { color: #5283CF; }
+.card .card-subtitle { color: #666666; font-size: 70%; }
+.card .card-content { white-space: normal; text-align:justify; margin:10px; }
+.card .card-content p { white-space: normal; text-overflow:initial; }
+.card .card-content hr { margin: 15px 30px 0 30px; height: 2px; border: none; background: linear-gradient(90deg, #FFFFFF, #D3D3D3, #FFFFFF)}
+.card .card-comment { margin: 15px 0 0 0; overflow: hidden; }
+.card .card-comment .card-comment-avatar { height:50px; width:50px; float:left; background-color: #5283CF; border-radius: 25px; padding:2px; }
+.card .card-comment .card-comment-content { float:left; width: calc(100% - 50px); padding-left: 10px; }
+.card .card-comment .card-comment-title { color: #5283CF; }
+.card .card-comment .card-comment-subtitle { color: #666666; font-size: 70%; }
+.card .card-input { margin: 15px 0 0 0; overflow: hidden; }
+.card .card-input .card-input-avatar { height:50px; width:50px; float:left; background-color: #5283CF; border-radius: 25px; padding:2px; }
+.card .card-input label { float:left; height: 50px; width: calc(100% - 125px); margin: 0 10px 0 10px; }
+.card .card-input button { float:left; height: 50px; width: 50px; }
+.card.card-search { padding:10px; }
+.card.card-search label { float:left; height: 50px; width: calc(100% - 57px); }
+.card.card-search button { float:left; height: 50px; width: 50px; margin:-1px 0 0 5px; border:none;}
+.card.card-friend { margin: 5px 10px 5px 10px; overflow: hidden; padding:10px; }
+.card.card-friend .card-friend-avatar { height:50px; width:50px; float:left; background-color: #5283CF; border-radius: 25px; padding:2px; }
+.card.card-friend .card-friend-content { float:left; width: calc(100% - 50px); padding-left: 10px; }
+.card.card-friend .card-friend-title { color: #5283CF; }
+
+/** Like **/
+.like { color: #666666; font-size: 70%; }
+.like .button-like { width:75px; color:#FFFFFF; background-color:#5283CF; border:none; border-radius: 2px; padding:5px 10px 5px 10px; margin-right:5px; }
+.like .button-like.activated{ background-color:#78B7E2; }
+.like .button-unlike { width:75px; color:#FFFFFF; background-color:#EE4530; border:none; border-radius: 2px; padding:5px 10px 5px 10px; margin-right:5px; }
+.like .button-unlike.activated{ background-color:#F16C5D; }
+
+/** Popup **/
+.popup-container .popup { border-radius: 12px; background-color:#FFFFFF; }
+.popup-head { background-color: #5283CF; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+.popup-title { color: #FFFFFF; }
+.popup-body { text-align: center; min-height: 100px; }
+.button { border-width: 0; }
+.popup-buttons.row { padding: 10px 40px; }
+.popup-buttons .button { border-radius: 45px; line-height:44px; }
+
+/** Alerts **/
+.alert { padding:10px; margin: 5px 10px 5px 10px; border: 1px solid transparent; border-radius: 4px; }
+.alert-success { background-color: #dff0d8; border-color: #d6e9c6; color: #3c763d; }
+.alert-error { background-color: #f2dede; border-color: #ebccd1; color: #a94442; }
+.alert-dismissable { padding-right: 35px; }
+.alert-dismissable .close { position: relative; width: 33px; height: 41px; top: -12px; right: -31px; }
+.alert-dismissable button.close { padding: 0; cursor: pointer; background: 0 0; border: 0; -webkit-appearance: none; color:#000000; }
+.alert-dismissable button.close.activated { padding: 0; cursor: pointer; background: 0 0; border: 0; -webkit-appearance: none; color:#999999;}
+.alert-dismissable .close { float: right; font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; opacity: .3; filter: alpha(opacity=20); }

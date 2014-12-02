@@ -1,0 +1,74 @@
+<ion-view title="{{title}}">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon-gray icon ion-navicon" ng-hide="$exposeAside.active"></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<button class="button button-icon" ng-click="displayAlerts()" ng-show="alertCount"><span class="badge badge-assertive">{{alertCount}}</span></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<button class="button button-icon icon-gray icon ion-star" ng-click="rateApp()"></button>
+	</ion-nav-buttons>
+
+	<ion-content class="has-header dashboard">
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			on-refresh="refresh()">
+		</ion-refresher>
+
+		<alert ng-repeat="alert in alerts" type="{{alert.type}}" ng-click="navTo()" close="closeAlert($index)" ng-if="showAlerts">{{alert.msg}}</alert>
+		
+		<div class="list">
+			<div class="card card-header">
+				<div class="card-top" ng-style="header.background">
+					<img class="card-top-avatar" ng-src="{{header.avatar}}" />
+				</div>
+				<div class="card-top-title">{{header.who}}</div>
+				<div class="card-top-content">{{header.desc}}</div>
+			</div>
+			
+			<div class="card" ng-repeat="msg in messages">
+				<!-- Title -->
+				<div class="item card-title" ng-click="toggleGroup(msg.id)">
+					{{msg.who}} <span class="card-subtitle">- {{msg.when}}</span>
+					<span class="item-icon-right"><i class="icon right" ng-class="isGroupShown(msg.id) ? 'ion-chevron-up' : 'ion-chevron-down'"></i></span>
+				</div>
+
+				<!-- Content -->
+				<div class="item row">
+					<div class="card-content">
+						<p>{{msg.content}}</p>
+
+						<div class="like">
+							<button ng-if="!msg.liked" ng-click="like(msg.id)" class="button-like"><i class="icon ion-thumbsup"></i> Like</button>
+							<button ng-if="msg.liked" ng-click="unlike(msg.id)" class="button-unlike"><i class="icon ion-thumbsdown"></i> Unlike</button>
+							{{msg.likes}} likes
+						</div>
+						
+						<hr ng-if="isGroupShown(msg.id)" />
+						<div class="list" ng-if="isGroupShown(msg.id)">
+							<div class="card-comment" ng-repeat="comment in msg.comments">
+								<img class="card-comment-avatar" ng-src="{{comment.avatar}}" />
+								<div class="card-comment-content">
+									<div class="card-comment-title">
+										{{comment.who}} <span class="card-comment-subtitle">- {{comment.when}}</span>
+									</div>
+									{{comment.content}}
+								</div>
+							</div>
+							<div class="card-input">
+								<form ng-submit="sendMsg(messageData)">
+									<img class="card-input-avatar" ng-src="{{me.avatar}}" />
+									<label class="item item-input">
+										<input type="text" ng-model="messageData.msg" placeholder="Enter your message" />
+										<input type="hidden" ng-model="messageData.msgId" ng-init="messageData.msgId = msg.id" />
+									</label>
+									<button class="button button-positive"><i class="icon right ion-paper-airplane"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
